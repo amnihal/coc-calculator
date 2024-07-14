@@ -1,0 +1,139 @@
+body {
+    background-image: url('asset/builder.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.nav {
+    background-color: rgba(24, 24, 24, 0.5);
+    backdrop-filter: blur(10px);
+    /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
+}
+
+main {
+    color: #ffecd1;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.gb {
+    background-color: rgba(13, 13, 13, 0.5);
+    /* Darker semi-transparent background */
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgb(255, 255, 255, 0.5);
+    /* Neumorphic shadow */
+    backdrop-filter: blur(10px);
+    /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
+    position: relative;
+    /* Needed for glow animation */
+    animation: glow 2s ease-in-out infinite alternate;
+    /* Glow animation */
+}
+
+@keyframes glow-shadow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+
+
+label {
+    font-weight: bold;
+    font-size: 1.1em;
+
+}
+
+input[type="number"],
+select {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+input[type="number"]::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1em;
+
+}
+
+button:hover {
+    background-color: #f0f0f0;
+
+}
+
+.btn1 {
+    border: none;
+    outline: solid 5px;
+    background: linear-gradient(0deg, rgba(255, 193, 105, 1) 0%, rgba(131, 79, 0, 1) 100%);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    outline-color: rgba(101, 72, 52, 255);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.467);
+
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 100%;
+        width: 3em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.5em;
+        transform: skewX(-45deg) translateX(0);
+        transition: none;
+    }
+
+    &:hover {
+
+        &:before {
+            transform: skewX(-45deg) translateX(25.5em);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}
